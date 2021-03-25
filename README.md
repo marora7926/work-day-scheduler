@@ -26,9 +26,15 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
+## Deployed Link
+
+ https://marora7926.github.io/work-day-scheduler/
+
 The following demonstrates the braching tree and application functionality:
+
+## Screenshot
 
 ![abc](./assest/image/abc.jpg)
 
 - - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Mohit Arora. Confidential and Proprietary. All Rights Reserved.
