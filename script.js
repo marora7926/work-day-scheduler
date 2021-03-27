@@ -14,9 +14,12 @@ setInterval(displayTime, 1000);
 
 // developing layout of the calender
 // setting variable in global scope.
-var textareaArrays = ["", "", "", "", "LunchBreak", "", "", "", ""];
+var textareaArrays = "";
 var storedText = "";
 
+
+$(document).ready(function(){
+});
 // time-block and hour content
 
 

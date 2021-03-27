@@ -25,13 +25,6 @@ textarea {
   white-space: pre-wrap;
 }
 
-/* .planner-container {
-  background-color: #ff6961;
-  padding: 80px;
-  margin: 20px;
-  height: 100px;
-} */
-
 .time-block {
   text-align: center;
   border-radius: 15px;
@@ -70,11 +63,22 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  animation: shadowPulse 0.8s infinite;;
 }
   
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+/* source: https://www.geekinsta.com/creating-a-pulse-effect-using-css/# */
+@keyframes shadowPulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+100% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
 }
 
 .footer-copyright{
