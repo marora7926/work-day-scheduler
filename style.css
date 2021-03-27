@@ -15,7 +15,7 @@ body {
   
   .jumbotron {
     text-align: center;
-    background-color: transparent;
+    background-color: rgb(111, 209, 226);
     color: black;
     border-radius: 0;
     border-bottom: 10px solid black;
@@ -69,4 +69,11 @@ body {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
   }
+
+  .footer-copyright{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-style: italic;
+}
   
