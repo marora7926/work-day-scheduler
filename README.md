@@ -32,9 +32,13 @@ THEN the saved events persist
 
 The following demonstrates the braching tree and application functionality:
 
+## Branching Tree
+
+![Branching Tree](./assets/images/branching-tree.jpg)
+
 ## Screenshot
 
-![abc](./assest/image/abc.jpg)
+![Screenshot](./assets/images/screenshot.jpg)
 
 - - -
 © 2021 Mohit Arora. Confidential and Proprietary. All Rights Reserved.

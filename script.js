@@ -1,6 +1,6 @@
 // reference to important DOM custom elements
 var timeDisplayEl = $('#currentDay');
-var displayScreen = $('#time-block');
+var timeBlock = $('time-block');
 
 // adding the current day, date and time in the jubotron
 function displayTime (){
@@ -29,9 +29,14 @@ $(document).ready(function(){
 // save botton with save icon and prompting user to save the text
 // saving data from textarea to local storage after pressing the save button.
 
+// loops as the day progress, the textarea changes the color using past, present and future css style
+var timeCurrent = moment().hour();
 
-// repeat the same for X number of times 9am to 5pm
-
-
-// as the day progress, the textarea changes the color using past, present and future css style
-
+function timeBlock() {
+    var timeblockTime = parseInt($("hour"));
+        if  (timeblockTime === timeCurrent){
+            timeBlock.addClass("present")
+        } else {
+            timeBlock.addClass("future")
+        }
+}; 
