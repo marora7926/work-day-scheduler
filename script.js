@@ -21,25 +21,34 @@ var timeCurrent = moment().hour();
 console.log(timeCurrent);
 
 // this will extract the integer value of timeblockTime
-var timeblockTime = 0;
+var timeblockTime = parseInt($(this).attr("id"));
 console.log(timeblockTime);
 
 // loops as the day progress, the textarea changes the color using past, present and future css style
 function timeBlock() {
     // var timeblockTime = parseInt($("hour"));
         if  (timeblockTime === timeCurrent){
+            timeBlock.removeClass("past")
             timeBlock.addClass("present")
         } else {
+            timeBlock.removeClass("past")
+            timeBlock.removeClass("present")
             timeBlock.addClass("future")
         }
 }; 
 
-// save botton with save icon and prompting user to save the text
+// Shadow pulse off to start with
+var shadowPulseOff = $(".fas").removeClass("shadowPulse");
+
+// save text botton with save icon
 $(".saveBtn").on("click",function(){
     var userText = $(this).siblings(".description").val();
     var userTime = $(this).parent().attr("id");
     localStorage.setItem(userText, userTime);
 })
+
+// shadow pulse on after after entering the data to prompt user to save
+var shadowPulseOn = $(".fas").addClass("shadowPulse");
 
 // get item from local storage to save in the textarea after presisng the save button
 function getTimeAndText(){
