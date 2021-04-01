@@ -99,4 +99,25 @@ textarea {
   color: white;
   font-style: italic;
 }
-  
+
+/* for screen 768px and below */
+@media screen and (max-width: 768px), screen and (max-width: 575px) {
+  .row {
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .hour {
+    padding-right: 10%;
+  }
+
+  .saveBtn {
+    border: 1px;
+    height: 50px;
+  }
+
+  textarea {
+    min-height: 50px;
+    border: 1px;
+  }
+}
