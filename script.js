@@ -46,10 +46,11 @@ $(document).ready(function () {
             }
         })
     };
+    
 
-    function shadowPulseOff () {        
+    // function shadowPulseOff () {        
         // Shadow pulse variable for turning it off to start with
-        $(".fas").removeClass("shadowPulse");
+        // $(".fas").removeClass("shadowPulse");
         
         // // shadow pulse variable for turning it on after entering the data to prompt user to save
         // var shadowPulseOn = $(".fas").addClass("shadowPulse");
@@ -59,35 +60,16 @@ $(document).ready(function () {
         // // } else {
         // //     shadowPulseOn = false;
         // // };
-    }
+    // }
 
-    timeBlock();
-    shadowPulseOff();
-
-    // function shadowPulseOff () {        
-        // Shadow pulse variable for turning it off to start with
-        $(".fas").removeClass("shadowPulse");
-            
-        // shadow pulse variable for turning it on after entering the data to prompt user to save
-        // var shadowPulseOn = $(".fas").addClass("shadowPulse");
-            
-        // if ("<textarea>" === ""){
-        //     shadowPulseOff = true;
-        // } else {
-        //     shadowPulseOn = false;
-        // };
-    //}
-        
+    // alerting the user to press the save button everytime they enter a new text or add to the existing text.
     $("textarea").change(function() {
-        alert( "save these detials by clicking the save button" );
+        alert("save these detials by clicking the save button" );
     });
 
-
-    // shadowPulseFunc();
-
-    // save text botton with save icon
-    $(".saveBtn").on("click",function(){
-        var userText = $(this).siblings(".description").val();
+    // save input and time to local storage after presisng the save button
+    $(".saveBtn").on("click", function(){
+        var userText = $(this).siblings(".description").val(); //get the nearby sibling value
         var userTime = $(this).parent().attr("id");
         localStorage.setItem(userText, userTime);
     })
@@ -102,4 +84,6 @@ $(document).ready(function () {
     $("#time3Pm .description").val(localStorage.getItem("time3Pm"));
     $("#time4Pm .description").val(localStorage.getItem("time4Pm"));
     $("#time5Pm .description").val(localStorage.getItem("time5Pm"));
+
+    timeBlock();
 })
