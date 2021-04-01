@@ -25,9 +25,17 @@ function timeBlock() {
     var timeblockTime = parseInt($(this).attr("id").split("hour")[1]);
     console.log(timeblockTime);
 
-        if  (timeblockTime === timeCurrent){
-            $(this).removeClass("past")
-            $(this).addClass("present")
+        // this will kepp the past class theme
+        if (timeblockTime < timeCurrent) {
+            $(this).removeClass("future");
+            $(this).removeClass("present");
+            $(this).addClass("past");
+        // this will kepp the present class theme
+        }else if  (timeblockTime === timeCurrent){
+            $(this).removeClass("past");
+            $(this).removeClass("future");
+            $(this).addClass("present");
+        // this will kepp the future class theme    
         } else {
             $(this).removeClass("past")
             $(this).removeClass("present")
@@ -39,7 +47,7 @@ function timeBlock() {
 $(document).ready(function () {
     timeBlock();
 
-    function shadowPulse () {
+    function shadowPulseFunc () {
         
         // Shadow pulse variable for turning it off to start with
         var shadowPulseOff = $(".fas").removeClass("shadowPulse");
@@ -47,13 +55,12 @@ $(document).ready(function () {
         var shadowPulseOn = $(".fas").addClass("shadowPulse");
         
         if ("<textarea>" === ""){
-            shadowPulseOff = true;
+            shadowPulseOff = false;
         } else {
-            shadowPulseOn = true;
+            shadowPulseOn = false;
         };
     }
-    
-    shadowPulse();
+    shadowPulseFunc();
 
     // save text botton with save icon
     $(".saveBtn").on("click",function(){
