@@ -38,7 +38,7 @@ The following demonstrates the braching tree and application functionality:
 
 ## Screenshot
 
-![Screenshot](./assets/images/screenshot.jpg)
+![Screenshot](./assets/images/screenshot.png)
 
 - - -
 © 2021 Mohit Arora. Confidential and Proprietary. All Rights Reserved.
