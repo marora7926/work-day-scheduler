@@ -49,17 +49,19 @@ $(document).ready(function () {
     
 
     // function shadowPulseOff () {        
-        // Shadow pulse variable for turning it off to start with
-        // $(".fas").removeClass("shadowPulse");
+    // Shadow pulse variable for turning it off to start with
+    // $(".fas").removeClass("shadowPulse");
+    // $(“fas”).removeClass(“fas”)
+    // $(this).addClass(“faspulse”)
         
-        // // shadow pulse variable for turning it on after entering the data to prompt user to save
-        // var shadowPulseOn = $(".fas").addClass("shadowPulse");
+    // shadow pulse variable for turning it on after entering the data to prompt user to save
+    // var shadowPulseOn = $(".fas").addClass("shadowPulse");
         
-        // // if ("<textarea>" === ""){
-        // //     shadowPulseOff = true;
-        // // } else {
-        // //     shadowPulseOn = false;
-        // // };
+    // if ("<textarea>" === ""){
+    //     shadowPulseOff = true;
+    // } else {
+    //     shadowPulseOn = false;
+    // };
     // }
 
     // alerting the user to press the save button everytime they enter a new text or add to the existing text.
@@ -71,12 +73,12 @@ $(document).ready(function () {
     $(".saveBtn").on("click", function(){
         var userText = $(this).siblings(".description").val(); //get the nearby sibling value
         var userTime = $(this).parent().attr("id");
-        localStorage.setItem(userText, userTime);
+        localStorage.setItem(userTime, userText);
     })
 
     // get item from local storage to save in the textarea after presisng the save button
     $("#time9Am .description").val(localStorage.getItem("time9Am"));
-    $("#time10am .description").val(localStorage.getItem("time10Am"));
+    $("#time10Am .description").val(localStorage.getItem("time10Am"));
     $("#time11Am .description").val(localStorage.getItem("time11Am"));
     $("#time12Pm .description").val(localStorage.getItem("time12Pm"));
     $("#time1Pm .description").val(localStorage.getItem("time1Pm"));
